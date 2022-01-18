@@ -1,2 +1,2 @@
 # CacheLibrary
-The cache is implemented in Java. This cache is a doubly linked list of nodes storing key-value pair.
+The cache library is implemented in Java. This cache is a doubly linked list of nodes storing key-value pair. In the implementation a memory interface is built which contains functionalities required by a memory struture. Currently this implementation uses a class JavaHashMap (in which inbuilt HashMap is used) as our memory structure. But this implementation is flexible to any memory structure to be used. Using such memory struture (like HashMap in our case) increases the lookup speed for a key. It takes O(1) on average for searching or getting a key. The types of both the key and value are made generic in this implementation.
