@@ -38,18 +38,18 @@ public abstract class Cache<K, V> {
 	// Adds the provided node at the end of the list of nodes
 	protected void AddAtLast(Node<K, V> node) {
 		tail.next = node;
-        node.prev = tail;
-        node.next = null;
-        tail = node;
+		node.prev = tail;
+		node.next = null;
+		tail = node;
 	}
 	// Removes node from the beginning of the list (cache)
 	protected void RemoveFromFirst() {
 		memory.Remove(head.next.key);
 		if(head.next == tail)
-            tail = head;
-        if(head.next.next != null)
-            head.next.next.prev = head;
-        head.next = head.next.next;
+		    tail = head;
+		if(head.next.next != null)
+		    head.next.next.prev = head;
+		head.next = head.next.next;
 	}
 	// Removes node from the end of the list (cache)
 	protected void RemoveFromLast() {
