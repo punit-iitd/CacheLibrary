@@ -14,7 +14,7 @@ public class MRU<K, V> extends Cache<K, V> {
 	@Override
 	public void InsertNewNode(Node<K, V> new_node) {
 		AddAtLast(new_node);
-        memory.Put(new_node.key, new_node);
+                memory.Put(new_node.key, new_node);
 	}
 	
 	// The recently used or accessed node is detached
@@ -24,7 +24,7 @@ public class MRU<K, V> extends Cache<K, V> {
 	@Override
 	public void ArrangeRecentlyUsedNode(Node<K, V> used_node) {
 		DetachNode(used_node);
-        AddAtLast(used_node);
+                AddAtLast(used_node);
 	}
 	
 	// Since least recently node is always at the
