@@ -11,7 +11,7 @@ public class LIFO<K, V> extends Cache<K, V>{
 	@Override
 	public void InsertNewNode(Node<K, V> new_node) {
 		AddAtLast(new_node);
-	    memory.Put(new_node.key, new_node);
+	        memory.Put(new_node.key, new_node);
 	}
 	
 	// Since new node is always added at the end
